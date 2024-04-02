@@ -30,7 +30,7 @@ saldo = 0
 if valor_deposito > 0
   # TODO: Imprima a mensagem de sucesso, formatando o saldo atual (vide Exemplos).
   saldo_novo = saldo + valor_deposito
-  puts "Deposito realizado com sucesso!\nSaldo atual: R$ #{saldo_novo.round(2)}"
+  puts "Deposito realizado com sucesso!\nSaldo atual: R$ #{'%.2f' % saldo_novo}"
 elsif valor_deposito < 0
   # TODO: Imprima a mensagem de valor inválido.
   puts 'Valor invalido! Digite um valor maior que zero.'
