@@ -19,3 +19,13 @@
 # 100 20	120
 # 50 10	  55
 # 200 50	300
+
+
+# Lê as entradas
+capacidade_atual, aumento_percentual = gets.chomp.split.map(&:to_i)
+
+# TODO: Calcule a nova capacidade do disco de Mithril
+nova_capacidade = capacidade_atual * (1.0 + aumento_percentual / 100.0)
+
+# TODO: Imprima a nova capacidade
+puts "#{nova_capacidade.to_i}"
