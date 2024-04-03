@@ -10,7 +10,8 @@ def iniciar_menu(produtos = [])
 
     case opcao
     when 1
-      mensagem 'Cadastro de produtos'
+      # mensagem 'Cadastro de produtos'
+      cadastro_produto(produtos)
     when 2
       mensagem 'Lista de produtos'
     when 3
