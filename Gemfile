@@ -4,3 +4,4 @@ source 'https://rubygems.org'
 ruby '3.3.0'
 
 gem 'byebug', '~> 11.1', '>= 11.1.3'
+gem 'terminal-table', '~> 3.0', '>= 3.0.2'
