@@ -16,7 +16,8 @@ def iniciar_menu(produtos = [])
       # mensagem 'Lista de produtos'
       listar_produtos(produtos)
     when 3
-      mensagem 'Retirada do estoque'
+      # mensagem 'Retirada do estoque'
+      retirar_estoque(produtos)
     when 4
       limpar_tela
       exit
