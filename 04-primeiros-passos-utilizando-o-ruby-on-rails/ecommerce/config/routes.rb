@@ -7,5 +7,15 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   root 'home#index'
-  get '/sobre', to: 'home#sobre', as: 'pagina_sobre'
+  # get '/sobre', to: 'home#sobre', as: 'pagina_sobre'
+
+  # grupo de rotas (usa namespace)
+  # namespace :api do
+  #   resources :home, only: [:index]
+  # end
+
+  get '/carros', to: 'carros#index', as: 'carros'
+  get '/carros/:id', to: 'carros#show', as: 'carros_show'
+
+  # resources :carros
 end

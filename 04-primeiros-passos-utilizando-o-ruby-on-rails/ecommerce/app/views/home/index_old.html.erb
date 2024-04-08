@@ -1,0 +1,13 @@
+<h1>Bem vindo pessoal</h1>
+
+<ul>
+  <% @itens.each do |item| %>
+    <li><%= item %></li>
+  <% end %>
+</ul>
+
+<a href="<%= pagina_sobre_path %>">Página de sobre</a>
+<!-- <a href="/sobre">Página de sobre</a> -->
+<br>
+<a href="<%= pagina_sobre_url %>">Página de sobre</a>
+<!-- <a href="http://127.0.0.1:3000/sobre">Página de sobre</a> -->

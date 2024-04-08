@@ -1,0 +1,30 @@
+<h1>Lista de Carros</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Nome</th>
+      <th>Modelo</th>
+      <th>Ano</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @carros.each do |carro| %>
+      <tr>
+        <td>
+          <%= carro.id %>
+        </td>
+        <td><%= carro.nome %></td>
+        <td><%= carro.modelo %></td>
+        <td><%= carro.ano %></td>
+        <td style="width: 80px;">
+          <!-- <a href="<%= carros_show_path(carro.id) %>"><%= carro.id %></a> -->
+          <!-- ou -->
+          <%= link_to "Mostrar", carros_show_path(carro.id), "class": "btn btn-primary" %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

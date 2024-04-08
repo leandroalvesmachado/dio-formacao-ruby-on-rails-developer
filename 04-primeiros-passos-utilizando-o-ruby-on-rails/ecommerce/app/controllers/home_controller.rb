@@ -1,7 +1,5 @@
 class HomeController < ApplicationController
   def index
-  end
-
-  def sobre
+    @itens = [0, 1, 3]
   end
 end
