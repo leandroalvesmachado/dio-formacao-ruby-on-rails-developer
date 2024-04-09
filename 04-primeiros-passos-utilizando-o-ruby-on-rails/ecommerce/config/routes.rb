@@ -14,8 +14,28 @@ Rails.application.routes.draw do
   #   resources :home, only: [:index]
   # end
 
+  # Lista todos os carros
   get '/carros', to: 'carros#index', as: 'carros'
+
+  # Exibe o formulário para criar um novo carro
+  get '/carros/new', to: 'carros#new', as: 'new_carro'
+
+  # Cria um novo carro
+  post '/carros', to: 'carros#create'
+
+  # Exibe os detalhes de um carro específico
   get '/carros/:id', to: 'carros#show', as: 'carros_show'
+
+  # Exibe o formulário para editar um carro existente
+  get '/carros/:id/edicao', to: 'carros#edit', as: 'edit_carro'
+
+  # Atualiza um carro existente
+  patch '/carros/:id', to: 'carros#update'
+  put '/carros/:id', to: 'carros#update'
+
+  # Exclui um carro existente
+  # delete '/carros/:id', to: 'carros#destroy'
+  get '/carros/:id/deletar', to: 'carros#destroy', as: 'carros_apagar'
 
   # resources :carros
 end
