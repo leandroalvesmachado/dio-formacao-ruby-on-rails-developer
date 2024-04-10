@@ -2,19 +2,12 @@
   <h1>Editar o carro</h1>
   <hr>
   <div style="text-align: left;">
-    <div>
-      <strong>Id:</strong><%= @carro.id %>
-    </div>
-    <div>
-      <strong>Nome</strong><%= @carro.nome %>
-    </div>
-    <div>
-      <strong>Modelo</strong><%= @carro.modelo %>
-    </div>
-    <div>
-      <strong>Ano</strong><%= @carro.ano %>
-    </div>
-    <hr>
-    <a href="/carros" class="btn btn-warning">Voltar para a lista</a>
+    <form action="<%= carros_alterar_path(@carro) %>" method="post">
+      <input type="hidden" name="_method" value="put">
+      <%= render 'form' %>
+      <hr>
+      <button type="submit" class="btn btn-primary">Enviar</button>
+      <a href="/carros" class="btn btn-warning">Voltar para a lista</a>
+    </form>
   </div>
 </section>

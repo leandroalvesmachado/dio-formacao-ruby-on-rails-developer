@@ -1,0 +1,12 @@
+<section class="text-center container">
+  <h1>Novo carro</h1>
+  <hr>
+  <div style="text-align: left;">
+    <form action="<%= carros_criar_path %>" method="post">
+      <%= render 'form' %>
+      <hr>
+      <button type="submit" class="btn btn-primary">Enviar</button>
+      <a href="/carros" class="btn btn-warning">Voltar para a lista</a>
+    </form>
+  </div>
+</section>

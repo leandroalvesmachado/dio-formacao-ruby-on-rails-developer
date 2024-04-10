@@ -1,6 +1,11 @@
 # Views Layouts e Templates em Ruby on Rails
 
-## Comando para iniciar o servidor
+## Comando para gerar o CRUD completo (Controllers, Models, Migrations, ....)
 ```sh
-rails s
+rails generate scaffold fornecedor
+```
+
+## Comando para desfazer o CRUD completo (Controllers, Models, Migrations, ....)
+```sh
+rails destroy scaffold fornecedor
 ```

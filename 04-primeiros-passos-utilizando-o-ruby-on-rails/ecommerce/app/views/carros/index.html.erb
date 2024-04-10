@@ -1,6 +1,10 @@
 <section class="text-center container">
   <h1>Lista de Carros</h1>
   <hr>
+    <div style="text-align: right;">
+      <a href="<%= carros_novo_path %>" class="btn btn-primary">Novo</a>
+    </div>
+  <hr>
   <table class="table">
     <thead>
       <tr>
@@ -24,8 +28,11 @@
             <!-- <a href="<%= carros_show_path(carro.id) %>"><%= carro.id %></a> -->
             <!-- ou -->
             <%= link_to "Mostrar", carros_show_path(carro.id), "class": "btn btn-primary" %>
-            <%= link_to "Editar", edit_carro_path(carro.id), "class": "btn btn-warning" %>
-            <%= link_to "Apagar", carros_apagar_path(carro.id), "class": "btn btn-danger" %>
+            <%= link_to "Editar", carros_edicao_path(carro.id), "class": "btn btn-warning" %>
+            <form style="display: inline;" action="<%= carros_apagar_path(carro.id) %>" method="post" onsubmit="return confirm('Confirma?')">
+              <input type="hidden" name="_method" value="delete">
+              <button type="submmit" class="btn btn-danger">Apagar</button>
+            </form>
           </td>
         </tr>
       <% end %>
