@@ -13,20 +13,22 @@
 
   <div>
     <%= form.label :nome, style: "display: block" %>
-    <%= form.text_field :nome %>
+    <%= form.text_field :nome, class: "form-control" %>
   </div>
 
   <div>
     <%= form.label :cnpj, style: "display: block" %>
-    <%= form.text_field :cnpj %>
+    <%= form.text_field :cnpj, class: "form-control" %>
   </div>
 
   <div>
     <%= form.label :endereco, style: "display: block" %>
-    <%= form.text_area :endereco %>
+    <%= form.text_area :endereco, class: "form-control" %>
   </div>
 
+  <br>
+
   <div>
-    <%= form.submit %>
+    <%= form.submit "Salvar", class: "btn btn-primary" %>
   </div>
 <% end %>
