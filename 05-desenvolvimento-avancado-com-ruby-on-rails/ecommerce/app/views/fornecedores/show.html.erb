@@ -1,0 +1,17 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @fornecedor %>
+
+<div>
+  <%= link_to "Editar", edit_fornecedor_path(@fornecedor), class: "btn btn-warning" %> |
+  <%= link_to "Voltar", fornecedores_path, class: "btn btn-primary" %>
+
+  <%# o helper button_to gera o formulário para o metodo delete %>
+  <%= 
+    button_to "Apagar", 
+      @fornecedor, 
+      class: "btn btn-danger", 
+      method: :delete, 
+      form: { style: "display: inline", onsubmit: "return confirm('Confirma?')" } 
+  %>
+</div>

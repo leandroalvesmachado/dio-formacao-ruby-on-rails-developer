@@ -1,0 +1,15 @@
+<!--
+<% if !@posts.blank? %>
+  <% for post in @posts %>
+    <%= raw post&.body %>
+    <hr>
+  <% end %>
+<% else %>
+  Nenhum post
+<% end %>
+-->
+
+<% @posts.each do |post| %>
+  <%= raw post&.body %>
+  <hr>
+<% end %>
