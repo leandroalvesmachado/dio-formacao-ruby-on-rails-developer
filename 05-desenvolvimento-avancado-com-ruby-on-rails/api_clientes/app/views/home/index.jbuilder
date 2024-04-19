@@ -1,0 +1,1 @@
+json.mensagem "Olá pessoal bem vindo a API com jbuilder"

@@ -10,4 +10,13 @@
 - validação para números no campo
 
 ## Validações de Formato - validates_format_of
-- validação para números no campo
+- validação para formatos no campo
+- site rubuluar para regex
+
+## Validações de Unicidade - validates_uniqueness_of
+
+## Validações de Confirmação - validates_confirmation_of
+
+## Validações de Aceitação - validates_acceptance_of
+
+## Validações Customizadas

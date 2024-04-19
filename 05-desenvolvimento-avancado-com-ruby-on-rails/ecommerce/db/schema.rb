@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_04_10_172918) do
+ActiveRecord::Schema[7.1].define(version: 2024_04_18_170645) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -22,12 +22,35 @@ ActiveRecord::Schema[7.1].define(version: 2024_04_10_172918) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "enderecos", force: :cascade do |t|
+    t.string "logradouro", limit: 255
+    t.string "numero", limit: 50
+    t.string "cep", limit: 11
+    t.string "cidade", limit: 150
+    t.string "estado", limit: 2
+    t.string "complemento", limit: 255
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "fornecedor_tipos", force: :cascade do |t|
+    t.string "nome", limit: 100
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "fornecedores", force: :cascade do |t|
     t.string "nome", limit: 150
     t.string "cnpj", limit: 25
     t.text "endereco"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "cep", limit: 11
+    t.string "email"
+    t.string "senha"
+    t.string "termos_de_uso", limit: 5
+    t.integer "fornecedor_tipo_id"
   end
 
+  add_foreign_key "fornecedores", "fornecedor_tipos"
 end

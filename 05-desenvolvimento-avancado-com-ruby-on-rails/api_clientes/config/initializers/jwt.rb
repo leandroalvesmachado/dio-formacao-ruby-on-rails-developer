@@ -1,0 +1,1 @@
+TOKEN_JWT = ENV["TOKEN_JWT"] || "123456"
