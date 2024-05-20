@@ -19,3 +19,4 @@ require 'faker'
 end
 
 Administrador.create(nome: 'Leandro', email: 'leandro@gmail.com', senha: '123456', perfil: 'ADM')
+Administrador.create(nome: 'Editor', email: 'editor@gmail.com', senha: '123456', perfil: 'Editor')

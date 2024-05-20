@@ -53,4 +53,6 @@ ActiveSupport::Inflector.inflections do |inflect|
   inflect.singular(/ses$/i, 's')
   inflect.singular(/zes$/i, 'z')
   inflect.singular(/xes$/i, 'x')
+
+  inflect.irregular 'fornecedores_enderecos', 'fornecedores_enderecos'
 end

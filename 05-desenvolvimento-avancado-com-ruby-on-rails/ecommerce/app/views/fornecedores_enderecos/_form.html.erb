@@ -1,0 +1,27 @@
+<%= form_with(model: [@fornecedor, fornecedores_enderecos]) do |form| %>
+  <% if fornecedores_enderecos.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(fornecedores_enderecos.errors.count, "error") %> prohibited this fornecedores_enderecos from being saved:</h2>
+
+      <ul>
+        <% fornecedores_enderecos.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :endereco_id, style: "display: block" %>
+    <%= form.text_field :endereco_id %>
+  </div>
+
+  <div>
+    <%= form.label :fornecedor_id, style: "display: block" %>
+    <%= form.text_field :fornecedor_id %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

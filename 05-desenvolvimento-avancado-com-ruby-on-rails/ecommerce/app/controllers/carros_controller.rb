@@ -1,4 +1,6 @@
 class CarrosController < ApplicationController
+  # before_action, after_action
+  
   def index
     # @carros = Carro.todos
     @carros = Carro.all

@@ -23,4 +23,8 @@
     <strong>Data Criação:</strong>
     <%= formata_data(fornecedor.created_at) %>
   </p>
+
+  <p>
+    <%= link_to 'Cadastrar endereços', fornecedor_fornecedores_enderecos_path(fornecedor) %>
+  </p>
 </div>

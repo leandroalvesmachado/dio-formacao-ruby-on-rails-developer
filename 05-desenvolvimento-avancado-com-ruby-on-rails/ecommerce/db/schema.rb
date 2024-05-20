@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_04_18_170645) do
+ActiveRecord::Schema[7.1].define(version: 2024_04_22_124229) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -52,5 +52,16 @@ ActiveRecord::Schema[7.1].define(version: 2024_04_18_170645) do
     t.integer "fornecedor_tipo_id"
   end
 
+  create_table "fornecedores_enderecos", force: :cascade do |t|
+    t.bigint "endereco_id", null: false
+    t.bigint "fornecedor_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["endereco_id"], name: "index_fornecedores_enderecos_on_endereco_id"
+    t.index ["fornecedor_id"], name: "index_fornecedores_enderecos_on_fornecedor_id"
+  end
+
   add_foreign_key "fornecedores", "fornecedor_tipos"
+  add_foreign_key "fornecedores_enderecos", "enderecos"
+  add_foreign_key "fornecedores_enderecos", "fornecedores"
 end
